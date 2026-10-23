@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+  }
+}
+
+/* Enforce pure light theme for the floating Workbench dashboard */
+#workbench-section,
+#workbench-section * {
+  --bg: #FFFFFF !important;
+  --bg-subtle: #F8FAFC !important;
+  --card-bg: #FFFFFF !important;
+  --card-hover: #F1F5F9 !important;
+  --text: #0F172A !important;
+  --muted: #64748B !important;
+  --border: #E2E8F0 !important;
+  --border-subtle: #F1F5F9 !important;
+}
+
+/* Custom utility styles conforming to design tokens */
+.bg-theme-bg { background-color: var(--bg); }
+.bg-theme-subtle { background-color: var(--bg-subtle); }
+.bg-theme-card { background-color: var(--card-bg); }
+.text-theme-text { color: var(--text); }
+.text-theme-muted { color: var(--muted); }
+.border-theme-border { border-color: var(--border); }
+.border-theme-subtle { border-color: var(--border-subtle); }
+
+.bg-accent-orange { background-color: var(--accent); }
+.hover-bg-accent-orange:hover { background-color: var(--accent-hover); }
+.text-accent-orange { color: var(--accent); }
+.bg-accent-tint { background-color: var(--accent-bg); }
+.border-accent-tint { border-color: var(--accent-border); }
+
+.bg-success-tint { background-color: var(--success-bg); }
+.text-success { color: var(--success); }
+.bg-danger-tint { background-color: var(--danger-bg); }
+.text-danger { color: var(--danger); }
+
+/* Custom smooth pulse for affordance */
+@keyframes attention-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(249, 115, 22, 0);
+  }
+}
+
+.animate-attention {
+  animation: attention-pulse 2s infinite ease-in-out;
+}
+
+/* Continuous ticker marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
