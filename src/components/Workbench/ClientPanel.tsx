@@ -38,7 +38,6 @@ export const ClientPanel: React.FC = () => {
         transition={{ duration: 0.25, ease: 'easeOut' }}
         className="absolute inset-y-0 right-0 w-full sm:w-[360px] bg-white border-l border-slate-200 shadow-2xl z-30 flex flex-col justify-between overflow-y-auto text-slate-900"
       >
-        {/* Panel Header */}
         <div className="p-4 border-b border-slate-200 bg-[#F8FAFC] flex items-center justify-between sticky top-0 z-10 backdrop-blur-md">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#F97316] font-bold text-xs flex items-center justify-center border border-orange-200">
@@ -78,9 +77,7 @@ export const ClientPanel: React.FC = () => {
           </button>
         </div>
 
-        {/* Panel Body: Cross-Module Unified View */}
         <div className="p-4 space-y-4 flex-1 text-xs">
-          {/* Explanation badge */}
           <div className="p-2.5 rounded-lg bg-orange-50 border border-orange-200 text-slate-800 flex items-start gap-2">
             <ShieldCheck className="w-4 h-4 text-[#F97316] shrink-0 mt-0.5" />
             <div className="leading-snug">
@@ -93,7 +90,6 @@ export const ClientPanel: React.FC = () => {
             </div>
           </div>
 
-          {/* Module 1: Billing & Invoice */}
           <div className="p-3 rounded-lg border border-slate-200 bg-white space-y-2 shadow-2xs">
             <div className="flex items-center justify-between text-slate-500 font-medium">
               <span className="flex items-center gap-1.5 font-bold text-slate-900">
@@ -121,7 +117,6 @@ export const ClientPanel: React.FC = () => {
             </div>
           </div>
 
-          {/* Module 2: Project Tasks */}
           <div className="p-3 rounded-lg border border-slate-200 bg-white space-y-2 shadow-2xs">
             <div className="flex items-center justify-between text-slate-500 font-medium">
               <span className="flex items-center gap-1.5 font-bold text-slate-900">
@@ -155,7 +150,6 @@ export const ClientPanel: React.FC = () => {
             </div>
           </div>
 
-          {/* Module 3: Calendar & Bookings */}
           <div className="p-3 rounded-lg border border-slate-200 bg-white space-y-2 shadow-2xs">
             <div className="flex items-center justify-between text-slate-500 font-medium">
               <span className="flex items-center gap-1.5 font-bold text-slate-900">
@@ -171,7 +165,6 @@ export const ClientPanel: React.FC = () => {
             </div>
           </div>
 
-          {/* Step 3 Explored Chips */}
           {step === 3 && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -224,7 +217,6 @@ export const ClientPanel: React.FC = () => {
           )}
         </div>
 
-        {/* Panel Footer Action Button */}
         <div className="p-4 border-t border-slate-200 bg-[#F8FAFC] space-y-2">
           {invoice.status === 'overdue' && (
             <button

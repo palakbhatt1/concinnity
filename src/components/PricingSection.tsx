@@ -55,7 +55,6 @@ export const PricingSection: React.FC = () => {
 
   return (
     <section id="pricing" className="relative py-16 sm:py-24 bg-white overflow-hidden border-b border-slate-100">
-      {/* Subtle background technical dot grid */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-[0.35]"
         style={{
@@ -65,7 +64,6 @@ export const PricingSection: React.FC = () => {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header from 00-overview.md & 02-design-spec.md */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold mb-3">
             <span className="w-2 h-2 rounded-full bg-blue-600 ring-2 ring-blue-300" />
@@ -81,7 +79,6 @@ export const PricingSection: React.FC = () => {
           </p>
         </div>
 
-        {/* 3 Pricing Cards matching UI reference */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
           {tiers.map((tier, idx) => (
             <motion.div
@@ -107,7 +104,6 @@ export const PricingSection: React.FC = () => {
                   )}
                 </div>
 
-                {/* Price */}
                 <div className="flex items-baseline gap-1.5 my-4">
                   <span className="text-4xl sm:text-5xl font-black font-mono tracking-tight text-neutral-900">
                     ${tier.price}
@@ -119,7 +115,6 @@ export const PricingSection: React.FC = () => {
                   {tier.desc}
                 </p>
 
-                {/* CTA Button */}
                 <a
                   href="#request-access"
                   className={`w-full py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 mb-7 cursor-pointer ${
@@ -132,7 +127,6 @@ export const PricingSection: React.FC = () => {
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
 
-                {/* Features List */}
                 <div className="space-y-3 pt-4 border-t border-slate-100">
                   <span className="text-[11px] font-bold text-neutral-700 block uppercase tracking-wider">
                     {tier.popular ? 'Everything in Solo, plus:' : 'Features:'}
@@ -159,7 +153,6 @@ export const PricingSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Guarantee Banner */}
         <div className="mt-12 flex justify-center">
           <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-slate-50 border border-slate-200 text-xs text-neutral-600 shadow-2xs">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

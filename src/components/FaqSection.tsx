@@ -11,7 +11,6 @@ export const FaqSection: React.FC = () => {
 
   return (
     <section id="faq" className="relative py-16 sm:py-24 bg-white overflow-hidden border-b border-slate-100">
-      {/* Background dot matrix */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-[0.35]"
         style={{

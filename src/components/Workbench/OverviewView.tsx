@@ -33,7 +33,6 @@ export const OverviewView: React.FC = () => {
 
   return (
     <div className={`p-3 sm:p-4 space-y-2.5 bg-white text-neutral-900 transition-colors relative ${isMess ? 'min-h-[460px] sm:min-h-[490px]' : ''}`}>
-      {/* 1. Dedicated Top Header Banner - Highlighted, Large Font, Strictly ABOVE all Clutter */}
       <div className="relative z-30 pb-2.5 border-b border-neutral-100 bg-white">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           {isMess ? (
@@ -80,9 +79,7 @@ export const OverviewView: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. Body Container: Holds Clutter Layer & Faded Dashboard strictly below the Header */}
       <div className="relative">
-        {/* Floating Scattered Tool Fragments & Team Cards during Mess Phase */}
         <AnimatePresence>
           {isMess && (
             <motion.div
@@ -93,8 +90,6 @@ export const OverviewView: React.FC = () => {
               transition={{ duration: 0.25, ease: 'easeOut' }}
               className="absolute inset-0 pointer-events-none z-20 overflow-hidden"
             >
-              {/* --- COLUMN 1: LEFT SIDE --- */}
-              {/* Michael Carter Founder Floating Card */}
               <motion.div
                 animate={{ rotate: -8, x: [0, 4, 0], y: [0, -3, 0] }}
                 transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
@@ -115,7 +110,6 @@ export const OverviewView: React.FC = () => {
                 </div>
               </motion.div>
 
-              {/* "+ New invoice" floating pill */}
               <motion.div
                 animate={{ rotate: -5, x: [0, -2, 0], y: [0, 2, 0] }}
                 transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
@@ -124,7 +118,6 @@ export const OverviewView: React.FC = () => {
                 <span>+ New invoice</span>
               </motion.div>
 
-              {/* Sarah Miller Project Manager Floating Card */}
               <motion.div
                 animate={{ rotate: -10, x: [0, -4, 0], y: [0, 4, 0] }}
                 transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut' }}
@@ -143,7 +136,6 @@ export const OverviewView: React.FC = () => {
                 </div>
               </motion.div>
 
-              {/* Stripe Failed Charge Alert Fragment */}
               <motion.div
                 animate={{ rotate: 4, x: [0, 3, 0], y: [0, -2, 0] }}
                 transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
@@ -153,7 +145,6 @@ export const OverviewView: React.FC = () => {
                 <span>Stripe: Failed charge $850</span>
               </motion.div>
 
-              {/* James Wilson Floating Card */}
               <motion.div
                 animate={{ rotate: -3, x: [0, 2, 0], y: [0, -2, 0] }}
                 transition={{ duration: 3.0, repeat: Infinity, ease: 'easeInOut' }}
@@ -166,8 +157,6 @@ export const OverviewView: React.FC = () => {
                 </div>
               </motion.div>
 
-              {/* --- COLUMN 2: CENTER-LEFT --- */}
-              {/* WhatsApp Fragment */}
               <motion.div
                 animate={{ rotate: -4, x: [0, 5, 0], y: [0, -3, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
@@ -177,7 +166,6 @@ export const OverviewView: React.FC = () => {
                 <span>WhatsApp: "Did you get my payment?"</span>
               </motion.div>
 
-              {/* Sticky Note Fragment */}
               <motion.div
                 animate={{ rotate: -5, x: [0, 4, 0], y: [0, -4, 0] }}
                 transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
@@ -187,7 +175,6 @@ export const OverviewView: React.FC = () => {
                 <span>Sticky Note: Follow up Brightline INV-198!</span>
               </motion.div>
 
-              {/* Slack Unread Tag */}
               <motion.div
                 animate={{ rotate: 3, x: [0, -3, 0], y: [0, 2, 0] }}
                 transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
@@ -197,7 +184,6 @@ export const OverviewView: React.FC = () => {
                 <span>Slack: "Hey, send the invoice again?"</span>
               </motion.div>
 
-              {/* Notion Doc Fragment */}
               <motion.div
                 animate={{ rotate: -4, x: [0, 2, 0], y: [0, -2, 0] }}
                 transition={{ duration: 3.1, repeat: Infinity, ease: 'easeInOut' }}
@@ -207,7 +193,6 @@ export const OverviewView: React.FC = () => {
                 <span>Notion: Client Brief v4_FINAL.doc</span>
               </motion.div>
 
-              {/* TASKS DUE 7 Floating Card */}
               <motion.div
                 animate={{ rotate: -4, x: [0, 3, 0], y: [0, -2, 0] }}
                 transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
@@ -217,8 +202,6 @@ export const OverviewView: React.FC = () => {
                 <div className="text-lg sm:text-xl font-black font-mono text-neutral-900 mt-0.5">7</div>
               </motion.div>
 
-              {/* --- COLUMN 3: CENTER-RIGHT --- */}
-              {/* "+ New work item" floating pill */}
               <motion.div
                 animate={{ rotate: -2, x: [0, 3, 0], y: [0, -3, 0] }}
                 transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
@@ -227,7 +210,6 @@ export const OverviewView: React.FC = () => {
                 <span>+ New work item</span>
               </motion.div>
 
-              {/* Google Sheets Fragment */}
               <motion.div
                 animate={{ rotate: 4, x: [0, -5, 0], y: [0, 4, 0] }}
                 transition={{ duration: 3.4, repeat: Infinity, ease: 'easeInOut' }}
@@ -237,7 +219,6 @@ export const OverviewView: React.FC = () => {
                 <span>Sheet: Brightline | $1,200 | Overdue</span>
               </motion.div>
 
-              {/* Drive PDF Fragment */}
               <motion.div
                 animate={{ rotate: 6, x: [0, -5, 0], y: [0, 4, 0] }}
                 transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
@@ -247,7 +228,6 @@ export const OverviewView: React.FC = () => {
                 <span>Drive: INV-198_v2_FINAL.pdf</span>
               </motion.div>
 
-              {/* Calendar Clash Fragment */}
               <motion.div
                 animate={{ rotate: -3, x: [0, 2, 0], y: [0, -2, 0] }}
                 transition={{ duration: 2.7, repeat: Infinity, ease: 'easeInOut' }}
@@ -257,7 +237,6 @@ export const OverviewView: React.FC = () => {
                 <span>Cal Clash: 2:00 PM Jordan vs Maya</span>
               </motion.div>
 
-              {/* Zoom Meeting Fragment */}
               <motion.div
                 animate={{ rotate: 3, x: [0, -2, 0], y: [0, 2, 0] }}
                 transition={{ duration: 2.9, repeat: Infinity, ease: 'easeInOut' }}
@@ -267,8 +246,6 @@ export const OverviewView: React.FC = () => {
                 <span>Zoom: Kickoff with Northwind (5m)</span>
               </motion.div>
 
-              {/* --- COLUMN 4: FAR RIGHT --- */}
-              {/* REVENUE $24,000 Floating Card */}
               <motion.div
                 animate={{ rotate: 7, x: [0, 3, 0], y: [0, -3, 0] }}
                 transition={{ duration: 3.0, repeat: Infinity, ease: 'easeInOut' }}
@@ -278,7 +255,6 @@ export const OverviewView: React.FC = () => {
                 <div className="text-lg sm:text-xl font-black font-mono text-emerald-600 mt-0.5">$24,000</div>
               </motion.div>
 
-              {/* OUTSTANDING $4,820 Floating Card */}
               <motion.div
                 animate={{ rotate: 5, x: [0, -3, 0], y: [0, 3, 0] }}
                 transition={{ duration: 3.4, repeat: Infinity, ease: 'easeInOut' }}
@@ -288,7 +264,6 @@ export const OverviewView: React.FC = () => {
                 <div className="text-lg sm:text-xl font-black font-mono text-amber-500 mt-0.5">$4,820</div>
               </motion.div>
 
-              {/* "+ New Client" floating pill */}
               <motion.div
                 animate={{ rotate: -3, x: [0, -3, 0], y: [0, 3, 0] }}
                 transition={{ duration: 3.0, repeat: Infinity, ease: 'easeInOut' }}
@@ -297,7 +272,6 @@ export const OverviewView: React.FC = () => {
                 <span>+ New Client</span>
               </motion.div>
 
-              {/* Unpaid Invoice Pill */}
               <motion.div
                 animate={{ rotate: 4, x: [0, 2, 0], y: [0, -2, 0] }}
                 transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
@@ -306,7 +280,6 @@ export const OverviewView: React.FC = () => {
                 <span>INV-201: $3,400 overdue</span>
               </motion.div>
 
-              {/* Emily Davis Floating Card */}
               <motion.div
                 animate={{ rotate: 4, x: [0, -2, 0], y: [0, 2, 0] }}
                 transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
@@ -322,15 +295,12 @@ export const OverviewView: React.FC = () => {
           )}
         </AnimatePresence>
 
-        {/* Underlying Dashboard Content - Reduced Opacity during Cluttered State, becomes 100% visible on scroll */}
         <motion.div
           animate={{ opacity: isMess ? 0.06 : 1 }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-3"
         >
-        {/* 4 Metric Cards in a row with Assembly Animation */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-2.5">
-          {/* Card 1: Revenue */}
           <motion.div
           animate={
             isMess
@@ -365,7 +335,6 @@ export const OverviewView: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Card 2: Active clients */}
         <motion.div
           animate={
             isMess
@@ -399,7 +368,6 @@ export const OverviewView: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Card 3: Tasks due */}
         <motion.div
           animate={
             isMess
@@ -434,7 +402,6 @@ export const OverviewView: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Card 4: Bookings today */}
         <motion.div
           animate={
             isMess
@@ -465,9 +432,7 @@ export const OverviewView: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Two Panes (Recent Activity + Today's Schedule) matching reference-full.png */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 sm:gap-3">
-        {/* Left Pane: Recent activity */}
         <motion.div
           animate={
             isMess
@@ -490,7 +455,6 @@ export const OverviewView: React.FC = () => {
           </div>
 
           <div className="space-y-2">
-            {/* Row 1: Invoice paid - Alex Rivera */}
             <div
               id="target-overdue-row"
               onClick={openClient}
@@ -524,7 +488,6 @@ export const OverviewView: React.FC = () => {
               </span>
             </div>
 
-            {/* Row 2: New client added - Northwind Studio */}
             <div className="py-1 flex items-center justify-between group cursor-pointer hover:bg-neutral-50/80 px-1 rounded-lg transition-colors">
               <div className="flex items-center gap-2.5 min-w-0">
                 <div className="w-8 h-8 rounded-lg bg-[#EBF3FE] text-[#1A73E8] flex items-center justify-center shrink-0">
@@ -549,7 +512,6 @@ export const OverviewView: React.FC = () => {
               </span>
             </div>
 
-            {/* Row 3: Task completed - Brand assets delivered */}
             <div className="py-1 flex items-center justify-between group cursor-pointer hover:bg-neutral-50/80 px-1 rounded-lg transition-colors">
               <div className="flex items-center gap-2.5 min-w-0">
                 <div className="w-8 h-8 rounded-lg bg-[#EBF3FE] text-[#1A73E8] flex items-center justify-center shrink-0">
@@ -576,7 +538,6 @@ export const OverviewView: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Right Pane: Today's schedule */}
         <motion.div
           animate={
             isMess
@@ -599,10 +560,8 @@ export const OverviewView: React.FC = () => {
           </div>
 
           <div className="space-y-1 relative">
-            {/* Vertical timeline connector rule */}
             <div className="absolute left-[54px] top-3 bottom-3 w-[1px] bg-neutral-200 pointer-events-none" />
 
-            {/* Event 1: Maya Chen */}
             <div className="py-1 flex items-center justify-between relative z-10 px-1">
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs font-semibold text-neutral-500 w-10">10:00</span>
@@ -617,7 +576,6 @@ export const OverviewView: React.FC = () => {
               </span>
             </div>
 
-            {/* Event 2: Jordan Ellis */}
             <div className="py-1 flex items-center justify-between relative z-10 px-1">
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs font-semibold text-neutral-500 w-10">11:30</span>
@@ -632,7 +590,6 @@ export const OverviewView: React.FC = () => {
               </span>
             </div>
 
-            {/* Event 3: Open slot */}
             <div className="py-1 flex items-center justify-between relative z-10 px-1">
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs font-semibold text-neutral-400 w-10">14:00</span>
@@ -644,7 +601,6 @@ export const OverviewView: React.FC = () => {
               </div>
             </div>
 
-            {/* Event 4: Sofia Rossi */}
             <div className="py-1 flex items-center justify-between relative z-10 px-1">
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs font-semibold text-neutral-500 w-10">16:00</span>

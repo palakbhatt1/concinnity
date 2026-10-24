@@ -25,7 +25,6 @@ export const CrmView: React.FC = () => {
       </div>
 
       <div className="divide-y divide-slate-100 rounded-lg border border-slate-200/90 bg-white overflow-hidden shadow-2xs">
-        {/* Brightline Row */}
         <div
           onClick={openClient}
           role="button"
@@ -81,7 +80,6 @@ export const CrmView: React.FC = () => {
           </div>
         </div>
 
-        {/* Other Clients */}
         {INITIAL_CLIENTS.filter((c) => c.name !== 'Brightline').map((c) => (
           <div
             key={c.id}

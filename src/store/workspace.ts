@@ -14,7 +14,6 @@ export type BusinessType = 'freelancer' | 'agency' | 'ecommerce' | 'saas'
 export type IntroPhase = 'mess' | 'assemble' | 'ready'
 
 export interface WorkspaceState {
-  // Shared Live Entity State
   invoice: {
     id: string
     client: string
@@ -35,7 +34,6 @@ export interface WorkspaceState {
   tasksDue: number
   bookingsToday: number
 
-  // Flow State
   step: 0 | 1 | 2 | 3
   view: ModuleView
   businessType: BusinessType
@@ -46,7 +44,6 @@ export interface WorkspaceState {
   isCascadeRunning: boolean
   theme: 'light' | 'dark'
 
-  // Actions
   openClient: () => void
   closeClient: () => void
   sendReminder: () => void
@@ -112,7 +109,6 @@ export const useWorkspaceStore = create<WorkspaceState>((set, get) => ({
     const { isCascadeRunning, step } = get()
     if (isCascadeRunning || step >= 2) return
 
-    // Step 2: Reminder sent
     set({
       invoice: {
         ...get().invoice,
@@ -124,7 +120,6 @@ export const useWorkspaceStore = create<WorkspaceState>((set, get) => ({
       isCascadeRunning: true,
     })
 
-    // Automatic cascade after ~1.8 seconds (Phase 3 spec)
     setTimeout(() => {
       set({
         toastMessage: 'Payment received: $1,200 from Brightline Studio via Stripe',

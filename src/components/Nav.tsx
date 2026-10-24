@@ -8,7 +8,6 @@ export const Nav: React.FC = () => {
   return (
     <header className="w-full z-40 relative px-4 sm:px-6 lg:px-8 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Brand Logo */}
         <a href="#" className="flex items-center gap-2.5 group focus:outline-none rounded-lg">
           <div className="w-7 h-7 rounded-lg bg-[#0A0A0A] flex items-center justify-center shadow-md border border-white/10 transition-transform group-hover:scale-105">
             <svg
@@ -28,7 +27,6 @@ export const Nav: React.FC = () => {
           </span>
         </a>
 
-        {/* Center Navigation Links */}
         <nav className="hidden md:flex items-center gap-7 text-xs sm:text-sm font-semibold text-white/90">
           <a href="#modules" className="hover:text-white transition-colors">
             Modules
@@ -44,7 +42,6 @@ export const Nav: React.FC = () => {
           </a>
         </nav>
 
-        {/* Right CTA Area */}
         <div className="flex items-center gap-3">
           <button
             type="button"

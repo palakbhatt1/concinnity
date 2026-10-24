@@ -56,7 +56,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
       id="modules-workbench"
       className="relative py-12 sm:py-16 bg-white overflow-hidden border-b border-slate-100"
     >
-      {/* Subtle background technical dot grid */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.25]"
         style={{
@@ -65,11 +64,9 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
         }}
       />
 
-      {/* Atmospheric Brand Blue Ambient Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-56 bg-[#1772F2]/5 blur-3xl pointer-events-none rounded-full" />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
-        {/* Section Header with Eyebrow in Brand Blue */}
         <div className="text-center mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#1772F2] text-xs font-semibold mb-2.5">
             <span className="w-2 h-2 rounded-full bg-[#1772F2] ring-2 ring-blue-300" />
@@ -79,7 +76,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
             See modules in the workbench
           </h2>
 
-          {/* Quick Module Tab Switcher in Brand Blue */}
           <div className="flex items-center justify-center gap-1.5 sm:gap-2 mt-4">
             {slideTabs.map((tab) => {
               const isActive = currentSlide === tab.index
@@ -100,10 +96,8 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
           </div>
         </div>
 
-        {/* Carousel Slide Area */}
         <div className="relative min-h-[380px] flex items-center justify-center">
           <AnimatePresence mode="wait">
-            {/* SLIDE 1: BILLING (Text on Left, Mac Window on Right) */}
             {currentSlide === 0 && (
               <motion.div
                 key="billing-slide"
@@ -113,7 +107,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                 transition={{ duration: 0.25, ease: 'easeOut' }}
                 className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center"
               >
-                {/* Left: Text Content */}
                 <div className="lg:col-span-5 flex flex-col justify-center">
                   <span className="inline-block w-fit px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-[#1772F2] text-[11px] font-bold tracking-tight mb-3">
                     Billing
@@ -136,10 +129,8 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                   </a>
                 </div>
 
-                {/* Right: Mac Window Preview */}
                 <div className="lg:col-span-7">
                   <div className="rounded-xl border border-slate-200/90 bg-white shadow-md shadow-slate-100 overflow-hidden">
-                    {/* Mac Window Titlebar */}
                     <div className="bg-slate-50/90 px-3.5 py-2 border-b border-slate-200/70 flex items-center gap-3">
                       <div className="flex items-center gap-1.5">
                         <span className="w-2.5 h-2.5 rounded-full bg-[#EF4444]" />
@@ -151,7 +142,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                       </span>
                     </div>
 
-                    {/* Window Subheader */}
                     <div className="px-4 py-3 flex items-center justify-between border-b border-slate-100">
                       <div className="flex items-baseline gap-1.5">
                         <span className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
@@ -165,7 +155,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                       </button>
                     </div>
 
-                    {/* Table View */}
                     <div className="overflow-x-auto">
                       <table className="w-full text-left border-collapse">
                         <thead>
@@ -177,7 +166,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100 text-xs sm:text-sm">
-                          {/* Row 1 */}
                           <tr className="hover:bg-slate-50/50 transition-colors">
                             <td className="py-2.5 px-4 font-bold text-slate-900">INV-204</td>
                             <td className="py-2.5 px-4 text-slate-600">Alex Rivera</td>
@@ -187,7 +175,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                             </td>
                           </tr>
 
-                          {/* Row 2 */}
                           <tr className="hover:bg-slate-50/50 transition-colors">
                             <td className="py-2.5 px-4 font-bold text-slate-900">INV-203</td>
                             <td className="py-2.5 px-4 text-slate-600">Orbit Media</td>
@@ -197,7 +184,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                             </td>
                           </tr>
 
-                          {/* Row 3 */}
                           <tr className="hover:bg-slate-50/50 transition-colors">
                             <td className="py-2.5 px-4 font-bold text-slate-900">INV-198</td>
                             <td className="py-2.5 px-4 text-slate-600">Brightline</td>
@@ -207,7 +193,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                             </td>
                           </tr>
 
-                          {/* Row 4 */}
                           <tr className="hover:bg-slate-50/50 transition-colors">
                             <td className="py-2.5 px-4 font-bold text-slate-900">INV-197</td>
                             <td className="py-2.5 px-4 text-slate-600">Frame Work</td>
@@ -224,7 +209,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
               </motion.div>
             )}
 
-            {/* SLIDE 2: CRM (Mac Window on Left, Text on Right) */}
             {currentSlide === 1 && (
               <motion.div
                 key="crm-slide"
@@ -234,10 +218,8 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                 transition={{ duration: 0.25, ease: 'easeOut' }}
                 className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center"
               >
-                {/* Left: Mac Window Preview */}
                 <div className="lg:col-span-7 order-2 lg:order-1">
                   <div className="rounded-xl border border-slate-200/90 bg-white shadow-md shadow-slate-100 overflow-hidden">
-                    {/* Mac Window Titlebar */}
                     <div className="bg-slate-50/90 px-3.5 py-2 border-b border-slate-200/70 flex items-center gap-3">
                       <div className="flex items-center gap-1.5">
                         <span className="w-2.5 h-2.5 rounded-full bg-[#EF4444]" />
@@ -249,7 +231,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                       </span>
                     </div>
 
-                    {/* Window Subheader */}
                     <div className="px-4 py-3 flex items-center justify-between border-b border-slate-100">
                       <div className="flex items-baseline gap-1.5">
                         <span className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
@@ -263,7 +244,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                       </button>
                     </div>
 
-                    {/* Table View */}
                     <div className="overflow-x-auto">
                       <table className="w-full text-left border-collapse">
                         <thead>
@@ -274,7 +254,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100 text-xs sm:text-sm">
-                          {/* Row 1 */}
                           <tr className="hover:bg-slate-50/50 transition-colors">
                             <td className="py-2.5 px-4">
                               <div className="flex items-center gap-2.5">
@@ -293,7 +272,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                             <td className="py-2.5 px-4 font-bold text-blue-900">Active Customer</td>
                           </tr>
 
-                          {/* Row 2 */}
                           <tr className="hover:bg-slate-50/50 transition-colors">
                             <td className="py-2.5 px-4">
                               <div className="flex items-center gap-2.5">
@@ -307,7 +285,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                             <td className="py-2.5 px-4 font-bold text-slate-900">Lead</td>
                           </tr>
 
-                          {/* Row 3 */}
                           <tr className="hover:bg-slate-50/50 transition-colors">
                             <td className="py-2.5 px-4">
                               <div className="flex items-center gap-2.5">
@@ -321,7 +298,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                             <td className="py-2.5 px-4 font-bold text-slate-900">Prospect</td>
                           </tr>
 
-                          {/* Row 4 */}
                           <tr className="hover:bg-slate-50/50 transition-colors">
                             <td className="py-2.5 px-4">
                               <div className="flex items-center gap-2.5">
@@ -335,7 +311,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                             <td className="py-2.5 px-4 font-bold text-slate-900">Lead</td>
                           </tr>
 
-                          {/* Row 5 */}
                           <tr className="hover:bg-slate-50/50 transition-colors">
                             <td className="py-2.5 px-4">
                               <div className="flex items-center gap-2.5">
@@ -354,7 +329,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                   </div>
                 </div>
 
-                {/* Right: Text Content */}
                 <div className="lg:col-span-5 flex flex-col justify-center order-1 lg:order-2">
                   <span className="inline-block w-fit px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-[#1772F2] text-[11px] font-bold tracking-tight mb-3">
                     CRM
@@ -379,7 +353,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
               </motion.div>
             )}
 
-            {/* SLIDE 3: BOOKINGS (Text on Left, Mac Window on Right) */}
             {currentSlide === 2 && (
               <motion.div
                 key="bookings-slide"
@@ -389,7 +362,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                 transition={{ duration: 0.25, ease: 'easeOut' }}
                 className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center"
               >
-                {/* Left: Text Content */}
                 <div className="lg:col-span-5 flex flex-col justify-center">
                   <span className="inline-block w-fit px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-[#1772F2] text-[11px] font-bold tracking-tight mb-3">
                     Bookings
@@ -412,10 +384,8 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                   </a>
                 </div>
 
-                {/* Right: Mac Window Preview */}
                 <div className="lg:col-span-7">
                   <div className="rounded-xl border border-slate-200/90 bg-white shadow-md shadow-slate-100 overflow-hidden">
-                    {/* Mac Window Titlebar */}
                     <div className="bg-slate-50/90 px-3.5 py-2 border-b border-slate-200/70 flex items-center gap-3">
                       <div className="flex items-center gap-1.5">
                         <span className="w-2.5 h-2.5 rounded-full bg-[#EF4444]" />
@@ -427,7 +397,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                       </span>
                     </div>
 
-                    {/* Window Subheader */}
                     <div className="px-4 py-3 flex items-center justify-between border-b border-slate-100">
                       <div className="flex items-baseline gap-1.5">
                         <span className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
@@ -440,9 +409,7 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                       </button>
                     </div>
 
-                    {/* Schedule List View */}
                     <div className="divide-y divide-slate-100 text-xs sm:text-sm">
-                      {/* Row 1 */}
                       <div className="py-2.5 px-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors">
                         <div className="flex items-center gap-3">
                           <span className="font-semibold text-slate-400 text-xs w-11">
@@ -456,7 +423,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                         <span className="font-bold text-slate-900 text-xs">Confirmed</span>
                       </div>
 
-                      {/* Row 2 */}
                       <div className="py-2.5 px-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors">
                         <div className="flex items-center gap-3">
                           <span className="font-semibold text-slate-400 text-xs w-11">
@@ -470,7 +436,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                         <span className="font-bold text-slate-900 text-xs">Confirmed</span>
                       </div>
 
-                      {/* Row 3 */}
                       <div className="py-2.5 px-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors">
                         <div className="flex items-center gap-3">
                           <span className="font-semibold text-slate-400 text-xs w-11">
@@ -484,7 +449,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                         <span className="font-medium text-slate-400 text-xs">Open</span>
                       </div>
 
-                      {/* Row 4 */}
                       <div className="py-2.5 px-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors">
                         <div className="flex items-center gap-3">
                           <span className="font-semibold text-slate-400 text-xs w-11">
@@ -503,7 +467,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
               </motion.div>
             )}
 
-            {/* SLIDE 4: TASKS (Mac Window on Left, Text on Right) */}
             {currentSlide === 3 && (
               <motion.div
                 key="tasks-slide"
@@ -513,10 +476,8 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                 transition={{ duration: 0.25, ease: 'easeOut' }}
                 className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center"
               >
-                {/* Left: Mac Window Preview */}
                 <div className="lg:col-span-7 order-2 lg:order-1">
                   <div className="rounded-xl border border-slate-200/90 bg-white shadow-md shadow-slate-100 overflow-hidden">
-                    {/* Mac Window Titlebar */}
                     <div className="bg-slate-50/90 px-3.5 py-2 border-b border-slate-200/70 flex items-center gap-3">
                       <div className="flex items-center gap-1.5">
                         <span className="w-2.5 h-2.5 rounded-full bg-[#EF4444]" />
@@ -528,7 +489,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                       </span>
                     </div>
 
-                    {/* Window Subheader */}
                     <div className="px-4 py-3 flex items-center justify-between border-b border-slate-100">
                       <div className="flex items-baseline gap-1.5">
                         <span className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
@@ -542,9 +502,7 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                       </button>
                     </div>
 
-                    {/* Checklist View */}
                     <div className="divide-y divide-slate-100 text-xs sm:text-sm">
-                      {/* Task 1 */}
                       <div
                         onClick={() => toggleTask(0)}
                         className="py-2.5 px-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors cursor-pointer group"
@@ -575,7 +533,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                         <span className="text-xs font-medium text-slate-500">Today</span>
                       </div>
 
-                      {/* Task 2 */}
                       <div
                         onClick={() => toggleTask(1)}
                         className="py-2.5 px-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors cursor-pointer group"
@@ -604,7 +561,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                         <span className="text-xs font-medium text-slate-500">Yesterday</span>
                       </div>
 
-                      {/* Task 3 */}
                       <div
                         onClick={() => toggleTask(2)}
                         className="py-2.5 px-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors cursor-pointer group"
@@ -633,7 +589,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                         <span className="text-xs font-medium text-slate-500">Fri</span>
                       </div>
 
-                      {/* Task 4 */}
                       <div
                         onClick={() => toggleTask(3)}
                         className="py-2.5 px-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors cursor-pointer group"
@@ -664,7 +619,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                         <span className="text-xs font-medium text-slate-500">Mon</span>
                       </div>
 
-                      {/* Task 5 */}
                       <div
                         onClick={() => toggleTask(4)}
                         className="py-2.5 px-4 flex items-center justify-between hover:bg-slate-50/50 transition-colors cursor-pointer group"
@@ -696,7 +650,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
                   </div>
                 </div>
 
-                {/* Right: Text Content */}
                 <div className="lg:col-span-5 flex flex-col justify-center order-1 lg:order-2">
                   <span className="inline-block w-fit px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-[#1772F2] text-[11px] font-bold tracking-tight mb-3">
                     Tasks
@@ -723,7 +676,6 @@ export const ModulesWorkbenchShowcase: React.FC<ModulesWorkbenchShowcaseProps> =
           </AnimatePresence>
         </div>
 
-        {/* Bottom Pagination Controls: < 1/4 > */}
         <div className="mt-8 sm:mt-10 flex items-center justify-center gap-2">
           <button
             onClick={prevSlide}

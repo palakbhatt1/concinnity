@@ -59,7 +59,6 @@ export const IntegrationsSection: React.FC = () => {
 
   return (
     <section id="integrations" className="relative py-16 sm:py-24 bg-white overflow-hidden border-b border-slate-100">
-      {/* Background dot matrix */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-[0.35]"
         style={{
@@ -69,7 +68,6 @@ export const IntegrationsSection: React.FC = () => {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header from 02-design-spec.md */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold mb-3">
             <span className="w-2 h-2 rounded-full bg-blue-600 ring-2 ring-blue-300" />
@@ -85,18 +83,14 @@ export const IntegrationsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Concentric Orbital Radar Diagram matching UI reference */}
         <div className="relative max-w-4xl mx-auto h-[380px] sm:h-[460px] rounded-3xl bg-gradient-to-b from-sky-50/50 via-blue-50/30 to-white border border-slate-200/90 shadow-sm flex items-center justify-center overflow-hidden mb-12">
-          {/* Ambient center blue glow */}
           <div className="absolute w-72 h-72 rounded-full bg-blue-400/20 blur-3xl pointer-events-none" />
 
-          {/* Concentric Circles */}
           <div className="absolute w-[560px] h-[560px] rounded-full border border-sky-200/50 pointer-events-none" />
           <div className="absolute w-[440px] h-[440px] rounded-full border border-sky-200/60 pointer-events-none" />
           <div className="absolute w-[320px] h-[320px] rounded-full border border-sky-300/70 pointer-events-none" />
           <div className="absolute w-[200px] h-[200px] rounded-full border border-blue-300/80 pointer-events-none" />
 
-          {/* Central Blue Glowing Node */}
           <motion.div
             whileHover={{ scale: 1.08 }}
             className="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-blue-600 to-sky-400 text-white flex items-center justify-center shadow-xl shadow-blue-500/35 z-20 cursor-default"
@@ -115,11 +109,9 @@ export const IntegrationsSection: React.FC = () => {
             </svg>
           </motion.div>
 
-          {/* Horizontal and Vertical Radar Axis Lines */}
           <div className="absolute inset-x-8 top-1/2 -translate-y-1/2 h-[1px] bg-gradient-to-r from-transparent via-sky-300/60 to-transparent pointer-events-none" />
           <div className="absolute inset-y-8 left-1/2 -translate-x-1/2 w-[1px] bg-gradient-to-b from-transparent via-sky-300/60 to-transparent pointer-events-none" />
 
-          {/* Orbiting Tool Nodes */}
           {tools.map((t, idx) => (
             <motion.div
               key={t.name}
@@ -139,7 +131,6 @@ export const IntegrationsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Where it's going: Solos AI Section from 00-overview.md & 02-design-spec.md */}
         <div className="max-w-4xl mx-auto p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-slate-50 to-white border border-slate-200/90 shadow-sm relative overflow-hidden">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200/70">
             <div className="flex items-center gap-3">

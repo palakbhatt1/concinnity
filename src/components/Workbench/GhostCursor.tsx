@@ -12,18 +12,15 @@ export const GhostCursor: React.FC<GhostCursorProps> = () => {
   const [showCursor, setShowCursor] = useState(false)
 
   useEffect(() => {
-    // If already interacted, never show ghost cursor
     if (hasInteracted || isClientPanelOpen || step > 0) {
       setShowCursor(false)
       return
     }
 
-    // Wait 3 seconds idle before showing ghost cursor
     const timer = setTimeout(() => {
       setShowCursor(true)
     }, 3000)
 
-    // Dismiss immediately on any mouse or keyboard activity
     const dismiss = () => {
       setShowCursor(false)
       setHasInteracted()

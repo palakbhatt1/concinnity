@@ -23,7 +23,6 @@ export const AccessSteps: React.FC = () => {
 
   return (
     <section id="how-it-works" className="relative py-16 sm:py-24 bg-white overflow-hidden border-b border-slate-100">
-      {/* Background dot matrix */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-[0.35]"
         style={{
@@ -48,7 +47,6 @@ export const AccessSteps: React.FC = () => {
           </p>
         </div>
 
-        {/* 3 Step Cards matching UI reference */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {steps.map((s, idx) => (
             <motion.div
@@ -85,7 +83,6 @@ export const AccessSteps: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA */}
         <div className="mt-12 text-center flex flex-col items-center gap-2">
           <a
             href="#request-access"

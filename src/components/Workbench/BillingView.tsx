@@ -54,9 +54,7 @@ export const BillingView: React.FC = () => {
 
   return (
     <div className="p-3 sm:p-5 space-y-4 bg-white text-slate-900">
-      {/* Money-First KPI Cards */}
       <div className="grid grid-cols-3 gap-2.5 sm:gap-3">
-        {/* Revenue */}
         <div className="p-3 rounded-lg bg-white border border-slate-200/90 shadow-2xs">
           <div className="flex items-center justify-between text-xs font-medium text-slate-500 mb-1">
             <span>Collected Revenue</span>
@@ -79,7 +77,6 @@ export const BillingView: React.FC = () => {
           </span>
         </div>
 
-        {/* Outstanding Receivables */}
         <div className="p-3 rounded-lg bg-white border border-slate-200/90 shadow-2xs">
           <div className="flex items-center justify-between text-xs font-medium text-slate-500 mb-1">
             <span>Outstanding</span>
@@ -101,7 +98,6 @@ export const BillingView: React.FC = () => {
           </span>
         </div>
 
-        {/* Tasks Due */}
         <div className="p-3 rounded-lg bg-white border border-slate-200/90 shadow-2xs">
           <div className="flex items-center justify-between text-xs font-medium text-slate-500 mb-1">
             <span>Tasks Due</span>
@@ -124,7 +120,6 @@ export const BillingView: React.FC = () => {
         </div>
       </div>
 
-      {/* Invoices Table */}
       <div className="rounded-lg border border-slate-200/90 overflow-hidden bg-white shadow-2xs">
         <div className="px-3 py-2 bg-[#F8FAFC] border-b border-slate-200/80 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -141,7 +136,6 @@ export const BillingView: React.FC = () => {
         </div>
 
         <div className="divide-y divide-slate-100">
-          {/* Target Interactive Row: Brightline INV-198 */}
           <div
             id="target-overdue-row"
             onClick={openClient}
@@ -159,7 +153,6 @@ export const BillingView: React.FC = () => {
                 : 'hover:bg-[#F8FAFC]'
             }`}
           >
-            {/* Visual pulsing affordance indicator when overdue */}
             {invoice.status === 'overdue' && (
               <span className="absolute -left-1 top-1/2 -translate-y-1/2 w-2 h-7 bg-[#F97316] rounded-r-md animate-attention" />
             )}
@@ -207,7 +200,6 @@ export const BillingView: React.FC = () => {
             </div>
           </div>
 
-          {/* Supporting Mock Invoices */}
           {INITIAL_INVOICES.filter((inv) => inv.id !== 'INV-198').map((inv) => (
             <div
               key={inv.id}

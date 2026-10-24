@@ -14,7 +14,6 @@ export const FinalCta: React.FC = () => {
 
   return (
     <section id="request-access" className="relative py-20 sm:py-28 bg-white overflow-hidden border-b border-slate-100">
-      {/* Background dot matrix */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-[0.35]"
         style={{
@@ -24,7 +23,6 @@ export const FinalCta: React.FC = () => {
       />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Eyebrow Pill from 00-overview.md */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold mb-4">
           <Sparkles className="w-3.5 h-3.5 text-blue-600" />
           <span>October Cohort · Invites Open</span>
@@ -52,7 +50,6 @@ export const FinalCta: React.FC = () => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-5">
-            {/* Plan Picker Pills */}
             <div className="flex items-center justify-center gap-2">
               {['Solo ($29/mo)', 'Hustler ($59/mo)', 'Empire ($129/mo)'].map((p) => (
                 <button
@@ -70,7 +67,6 @@ export const FinalCta: React.FC = () => {
               ))}
             </div>
 
-            {/* Pill Search / Email Input Bar matching UI reference */}
             <div className="p-1.5 sm:p-2 rounded-full bg-white border border-slate-200 shadow-lg shadow-slate-200/50 flex items-center gap-2 transition-all focus-within:border-blue-400 focus-within:ring-4 focus-within:ring-blue-100">
               <div className="pl-3 sm:pl-4 text-slate-400">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />

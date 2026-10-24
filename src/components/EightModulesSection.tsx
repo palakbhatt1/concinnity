@@ -93,7 +93,6 @@ export const EightModulesSection: React.FC<EightModulesSectionProps> = ({ onSele
     <section id="features" className="relative py-12 sm:py-16 bg-white overflow-hidden border-b border-slate-100">
       <span id="modules" className="absolute -top-16" />
       
-      {/* Subtle background technical dot grid */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-[0.25]"
         style={{
@@ -102,10 +101,8 @@ export const EightModulesSection: React.FC<EightModulesSectionProps> = ({ onSele
         }}
       />
 
-      {/* Atmospheric Brand Blue Ambient Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-56 bg-[#1772F2]/5 blur-3xl pointer-events-none rounded-full" />
 
-      {/* Faint floating decorative icons in our brand blue theme */}
       <div className="absolute left-8 lg:left-14 top-1/2 -translate-y-8 hidden xl:flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50/80 border border-blue-200/60 text-[#1772F2] opacity-75 shadow-2xs pointer-events-none">
         <CreditCard className="w-4 h-4" />
       </div>
@@ -115,28 +112,23 @@ export const EightModulesSection: React.FC<EightModulesSectionProps> = ({ onSele
       </div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center">
-        {/* Top small icon badge in brand blue */}
         <div className="mb-3 w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-[#1772F2] shadow-2xs">
           <Layers className="w-4 h-4" />
         </div>
 
-        {/* Eyebrow Pill in our Brand Blue UI Theme */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#1772F2] text-xs font-semibold mb-3">
           <span className="w-2 h-2 rounded-full bg-[#1772F2] ring-2 ring-blue-200" />
           <span>Modular Power</span>
         </div>
 
-        {/* Section Heading */}
         <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-neutral-900 tracking-tight text-center leading-[1.2]">
           Eight modules. One login.
         </h2>
 
-        {/* Subtitle */}
         <p className="text-neutral-500 text-xs sm:text-sm md:text-base max-w-xl mx-auto text-center mt-2.5 leading-relaxed">
           Billing, CRM, tasks, bookings, team, gear, finance, and marketing share the same clients and money. Turn modules on when you need them.
         </p>
 
-        {/* 8 Module Pills Container */}
         <div className="mt-7 sm:mt-9 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 max-w-4xl">
           {modules.map((mod) => {
             const Icon = mod.icon
@@ -159,9 +151,7 @@ export const EightModulesSection: React.FC<EightModulesSectionProps> = ({ onSele
           })}
         </div>
 
-        {/* Ticker Row */}
         <div className="w-full max-w-3xl mt-7 sm:mt-8 relative overflow-hidden py-2 border-y border-slate-100/80">
-          {/* Gradient edge masks */}
           <div className="absolute left-0 top-0 bottom-0 w-14 sm:w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-14 sm:w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
@@ -177,7 +167,6 @@ export const EightModulesSection: React.FC<EightModulesSectionProps> = ({ onSele
           </div>
         </div>
 
-        {/* Dedicated Request Access BUTTON in Brand Blue */}
         <div className="mt-6 sm:mt-7 flex items-center justify-center">
           <a
             href="#request-access"

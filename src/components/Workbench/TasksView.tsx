@@ -24,7 +24,6 @@ export const TasksView: React.FC = () => {
       </div>
 
       <div className="divide-y divide-slate-100 rounded-lg border border-slate-200/90 bg-white overflow-hidden shadow-2xs">
-        {/* Dynamic Target Task: Follow up INV-198 */}
         <div
           onClick={openClient}
           role="button"
@@ -39,7 +38,6 @@ export const TasksView: React.FC = () => {
           }`}
         >
           <div className="flex items-center gap-3 min-w-0">
-            {/* Checked / Unchecked Checkbox */}
             <div
               className={`w-5 h-5 rounded flex items-center justify-center border transition-all ${
                 task.done
@@ -89,14 +87,12 @@ export const TasksView: React.FC = () => {
           </div>
         </div>
 
-        {/* Other Tasks */}
         {INITIAL_TASKS.filter((t) => t.id !== 'T-12').map((t) => (
           <div
             key={t.id}
             className="p-3 sm:p-3.5 flex items-center justify-between opacity-80 hover:opacity-100 hover:bg-[#F8FAFC] transition-colors"
           >
             <div className="flex items-center gap-3 min-w-0">
-              {/* Proper Checked state for done tasks! */}
               <div
                 className={`w-5 h-5 rounded flex items-center justify-center border ${
                   t.done

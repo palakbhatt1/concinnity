@@ -12,10 +12,8 @@ export const Hero: React.FC = () => {
         clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 85px), 50% calc(100% - 25px), 0 calc(100% - 85px))',
       }}
     >
-      {/* 1. Base Sky Gradient Underlay */}
       <div className="absolute inset-0 bg-[#1772F2] pointer-events-none" />
 
-      {/* 2. Primary Crystal-Clear Living Sky and Cloudscape (Moves slowly left to right behind content) */}
       <motion.div
         className="absolute -inset-10 bg-cover bg-center pointer-events-none will-change-transform z-0"
         style={{
@@ -32,26 +30,20 @@ export const Hero: React.FC = () => {
         }}
       />
 
-      {/* Very subtle dark vignette at the very top for contrast with white nav */}
       <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/20 to-transparent pointer-events-none z-10" />
 
-      {/* 1. Integrated Navbar floating on sky */}
       <Nav />
 
-      {/* 2. Main Hero Content Container (Balanced to fit in one viewport) */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-6 flex-1 flex flex-col items-center justify-center text-center">
-        {/* Main Headline (Scaled to fit the screen without stretching) */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold tracking-tight text-white leading-[1.12] max-w-3xl drop-shadow-sm mb-2">
           Run your business.<br />
           Not five different tools.
         </h1>
 
-        {/* Subline */}
         <p className="text-xs sm:text-sm md:text-base text-white/90 max-w-xl leading-snug mb-3 font-normal drop-shadow-2xs">
           Clients, invoices, bookings, tasks, team, finance, and marketing — all in one workspace. A product you run, not another doc you maintain.
         </p>
 
-        {/* Hero CTAs */}
         <div className="flex items-center justify-center gap-2.5 mb-2.5">
           <a
             href="#request-access"
@@ -69,7 +61,6 @@ export const Hero: React.FC = () => {
           </a>
         </div>
 
-        {/* Social Proof Pill with Avatars placed below CTAs */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1D4ED8]/35 backdrop-blur-md border border-white/35 text-white shadow-xs mb-3 transition-transform hover:scale-105 cursor-default">
           <img
             src="/avatars-highres.png"
@@ -81,7 +72,6 @@ export const Hero: React.FC = () => {
           </span>
         </div>
 
-        {/* 3. The Centered Floating Dashboard Workbench */}
         <div className="w-full relative z-20">
           <Workbench />
         </div>

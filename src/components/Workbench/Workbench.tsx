@@ -34,28 +34,23 @@ export const Workbench: React.FC = () => {
     setIntroPhase,
   } = useWorkspaceStore()
 
-  // Pristine default state matching reference-full.png
   const isMess = introPhase === 'mess'
   const isReady = introPhase === 'ready'
 
-  // Scroll listener: Reacts immediately on the very first scroll down (> 25px) to transition to organized dashboard!
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY
-      // React instantly on the very first scroll down
       if (scrollY > 25) {
         if (introPhase !== 'ready') {
           setIntroPhase('ready')
         }
       } else if (scrollY <= 10) {
-        // When at the very top, show the cluttered stack
         if (introPhase !== 'mess') {
           setIntroPhase('mess')
         }
       }
     }
 
-    // Check on mount to match current position
     handleScroll()
 
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -63,7 +58,6 @@ export const Workbench: React.FC = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [introPhase, setIntroPhase])
-
 
   const sidebarItems: { id: ModuleView; label: string; icon: React.FC<{ className?: string }> }[] = [
     { id: 'overview', label: 'Overview', icon: Home },
@@ -78,7 +72,6 @@ export const Workbench: React.FC = () => {
 
   return (
     <div className="w-full relative">
-      {/* Main Workbench Outer Shell - Frosted Glass Rim with Solid Pristine White Inside matching reference-full.png */}
       <div
         id="workbench-section"
         className="relative w-full max-w-6xl xl:max-w-7xl mx-auto rounded-3xl p-1.5 sm:p-2 bg-white/60 backdrop-blur-xl border border-white/80 shadow-[0_20px_50px_rgba(15,110,207,0.18)] transition-all [color-scheme:light]"
@@ -92,18 +85,14 @@ export const Workbench: React.FC = () => {
           '--border-subtle': '#F1F5F9',
         } as React.CSSProperties}
       >
-        {/* Ghost Cursor idle guidance - only when ready so it doesn't distract while cards assemble */}
         {isReady && <GhostCursor />}
 
-        {/* Main Inner Dashboard Wrapper - 100% Solid Pristine White */}
         <div className="relative rounded-xl sm:rounded-2xl bg-white border border-slate-200/90 shadow-sm overflow-hidden text-slate-900">
-          {/* Top Header Bar */}
           <motion.div
             animate={{ opacity: isMess ? 0.08 : 1 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="px-3 sm:px-4 py-2 sm:py-2.5 border-b border-slate-100 bg-white flex items-center justify-between gap-3 text-slate-900"
           >
-            {/* Left Brand inside workspace */}
             <div className="flex items-center gap-2 shrink-0">
               <div className="w-6 h-6 rounded-md bg-[#0A0A0A] flex items-center justify-center shadow-2xs">
                 <svg
@@ -123,7 +112,6 @@ export const Workbench: React.FC = () => {
               </span>
             </div>
 
-            {/* Center Search Input */}
             <div className="flex-1 max-w-sm mx-auto hidden sm:block">
               <div className="relative flex items-center">
                 <Search className="w-3 h-3 text-neutral-400 absolute left-2.5 pointer-events-none" />
@@ -139,16 +127,13 @@ export const Workbench: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Area: Bell, Michael Profile Avatar matching reference-full.png */}
             <div className="flex items-center gap-2 sm:gap-3 shrink-0">
 
-              {/* Notification Bell */}
               <div className="relative p-1 rounded text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 transition-colors cursor-pointer">
                 <Bell className="w-3.5 h-3.5" />
                 <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-[#F97316]" />
               </div>
 
-              {/* Michael's Profile Avatar from asset pack */}
               <div className="flex items-center gap-1.5 pl-0.5">
                 <div className="relative">
                   <img
@@ -162,9 +147,7 @@ export const Workbench: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Dashboard Body with Live Assembly Transition */}
           <div className="relative flex flex-col md:flex-row min-h-[300px] sm:min-h-[340px]">
-            {/* Sidebar Navigation - Hidden in mess phase, slides in during assembly */}
             <motion.div
               animate={
                 isMess
@@ -206,7 +189,6 @@ export const Workbench: React.FC = () => {
 
             </motion.div>
 
-          {/* Main Content View Container - Pure White */}
           <div className="relative flex-1 bg-white min-w-0 overflow-hidden text-neutral-900">
             {view === 'overview' && <OverviewView />}
             {view === 'billing' && <BillingView />}
@@ -215,15 +197,11 @@ export const Workbench: React.FC = () => {
             {view === 'bookings' && <BookingsView />}
             {(view === 'team' || view === 'finance' || view === 'marketing') && <OverviewView />}
 
-            {/* Slide-over Client Panel */}
             <ClientPanel />
           </div>
         </div>
       </div>
 
-
-
-      {/* Polite Live Toast Notification */}
       <AnimatePresence>
         {toastMessage && (
           <motion.div

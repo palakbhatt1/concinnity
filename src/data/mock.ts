@@ -93,7 +93,7 @@ export const INITIAL_INVOICES: InvoiceRecord[] = [
     amount: 1200,
     issueDate: 'Oct 08, 2026',
     dueDate: 'Oct 15, 2026',
-    status: 'overdue' // Key target
+    status: 'overdue'
   },
   {
     id: 'INV-197',
@@ -129,7 +129,7 @@ export const INITIAL_TASKS: TaskRecord[] = [
     client: 'Brightline',
     dueDate: 'Today',
     priority: 'High',
-    done: false // Will cascade to true upon payment
+    done: false
   },
   {
     id: 'T-11',
@@ -164,7 +164,7 @@ export const INITIAL_CLIENTS: ClientRecord[] = [
   {
     id: 'C-01',
     name: 'Brightline',
-    tag: 'Client', // Becomes 'Active customer' on payment
+    tag: 'Client',
     contactPerson: 'David Vance (Founder & CEO)',
     email: 'david@brightline.design',
     totalLtv: 18400,

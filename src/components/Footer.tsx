@@ -5,7 +5,6 @@ export const Footer: React.FC = () => {
     <footer className="relative bg-white pt-10 pb-0 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-12 border-t border-slate-100 pt-8">
-          {/* Brand Logo & Name */}
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-sky-400 text-white flex items-center justify-center shadow-md shadow-blue-500/20">
               <svg
@@ -31,7 +30,6 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Nav Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-neutral-500">
             <a href="#why-us" className="hover:text-neutral-900 transition-colors">
               Why us
@@ -53,14 +51,12 @@ export const Footer: React.FC = () => {
             </a>
           </div>
 
-          {/* Copyright */}
           <div className="flex items-center gap-4 text-neutral-400 text-xs">
             <span className="text-[11px] text-neutral-400">© 2026 Solopreneur OS. All rights reserved.</span>
           </div>
         </div>
       </div>
 
-      {/* Panoramic Rolling Green Hills Landscape at the very bottom matching UI reference */}
       <div className="w-full h-44 sm:h-64 md:h-80 relative overflow-hidden">
         <img
           src="/footer-hills.jpg"
