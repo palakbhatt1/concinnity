@@ -29,7 +29,6 @@ export const OverviewView: React.FC = () => {
   } = useWorkspaceStore()
 
   const isMess = introPhase === 'mess'
-  const isAssemble = introPhase === 'assemble'
 
   return (
     <div className={`p-3 sm:p-4 space-y-2.5 bg-white text-neutral-900 transition-colors relative ${isMess ? 'min-h-[460px] sm:min-h-[490px]' : ''}`}>
@@ -48,10 +47,6 @@ export const OverviewView: React.FC = () => {
                 SCROLL — WATCH THE MESS BECOME YOUR DASHBOARD
               </p>
             </div>
-          ) : isAssemble ? (
-            <h3 className="text-sm sm:text-base font-extrabold text-[#F97316] tracking-tight flex items-center gap-1.5">
-              <span>Unifying into Solopreneur OS...</span>
-            </h3>
           ) : (
             <div>
               <h3 className="text-sm sm:text-base font-extrabold text-neutral-900 tracking-tight flex items-center gap-1.5">
